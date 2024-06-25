@@ -78,7 +78,7 @@ for(int i = 0; i < nums.Length; i++)
 At the end of the **Program** class there is next structure:
 
 - Console WriteLine -> displaying that the code is done processing.
-- Console ReadLine -> where it is waiting for user input. Why are we waiting for user input? -> To stop the code from automatically completing and exiting and us not being able to check the result of the code.
+- Console ReadLine -> where it is waiting for user input. Why are we waiting for user input? To stop the code from automatically completing and exiting and us not being able to check the result of the code.
 
 ```cs
 Console.WriteLine("\nDone processing");
