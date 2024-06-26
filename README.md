@@ -32,11 +32,11 @@ int[] nums = { 1, 2, 3, 4 };
 Currently, the **nums** numeric (int) array is initialized by using next structure:
 
 - Console Write -> where it displays that the length of the array must be inputted.
-- int input = int Parse Console ReadLine -> where user input is stored into a variable.
+- int input = int Parse Console ReadLine -> where user input is stored into a numeric input (int).
 - int[] array = new int[input] -> where new array is initialized and instantiated with the length specified in the previous input.
 - for loop -> which iterates from _0 to input_ and allows us to input array member values one at a time.
 - Console Write -> where it displays which array member's value needs to be inputted.
-- array[i] = int Parse Console ReadLine -> where user input is stored into a variable.
+- array[i] = int Parse Console ReadLine -> where user input is stored into the array.
 
 ```cs
 Console.Write("What is the length of the array: ");
