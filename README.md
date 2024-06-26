@@ -34,7 +34,7 @@ Currently, the **nums** numeric (int) array is initialized by using next structu
 - Console Write -> where it displays that the length of the array must be inputted.
 - int input = int Parse Console ReadLine -> where user input is stored into a variable.
 - int[] array = new int[input] -> where new array is initialized and instantiated with the length specified in the previous input.
-- for loop -> which iterates from 0 to input and allows us to input array member values one at a time.
+- for loop -> which iterates from _0 to input_ and allows us to input array member values one at a time.
 - Console Write -> where it displays which array member's value needs to be inputted.
 - array[i] = int Parse Console ReadLine -> where user input is stored into a variable.
 
@@ -55,7 +55,7 @@ for (int i = 0; i < numsLength; i++)
 <summary>CODE EXPLAINED IN GREATER DETAIL</summary><br>
 - When initializing an array and at once filling it with values, notice that array Length does not need to be specified. This is because the Length of the array is implied by the number of values provided. Also, array does not need to be specifically instantiated (new int[input]). This is because instantiation is implied.<br><br>
 - When initializing an array first before filling it with values, array Length needs to be specified and array needs to be specifically instantiated (new int[input]).<br><br>
-- Console.ReadLine always takes user input in a text format (string) . To convert the text input into (string) a numeric input (int) -> int.Parse needs to be used.<br><br>
+- Console.ReadLine always takes user input in a text format (string) . To convert the text input (string) into a numeric input (int) -> int Parse needs to be used.<br><br>
 - Array members can be accessed by using array[i].<br>
 </details>
 
@@ -96,7 +96,7 @@ public class Solution
     {
 ```
 
-The **for** loop is initialized that iterates from _1 to _array Length_.
+The **for** loop is initialized that iterates from _1 to array Length_.
 
 Why does i go from 1 and not 0? Because the first array member value remains the same.
 
