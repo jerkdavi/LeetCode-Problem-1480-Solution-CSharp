@@ -23,20 +23,20 @@ internal class Program
     {
 ```
 
-Firstly, the **nums** int array (int[]) is being initialized by using basic array initialization. This part of code is commented out currently.
+Firstly, the **nums** numeric (int) array (int[]) is initialized by using basic array initialization. This part of code is commented out currently.
 
 ```cs
 int[] nums = { 1, 2, 3, 4 };
 ```
 
-Currently, the **nums** int array is being initialized by using next structure:
+Currently, the **nums** numeric (int) array is initialized by using next structure:
 
-- Console Write -> where it is evident that first the length of the array must be specified
-- int input = int Parse Console ReadLine -> where user input is being stored into a variable
-- int[] array = new int[input] -> where new array is initialized with the length of the previous input
-- for loop -> which goes through 0 to input to be able to input array members value one at a time
-- Console Write -> where it is evident which array member value needs to be inputted
-- array[i] = int Parse Console ReadLine_ -> where user input is being stored into a variable
+- Console Write -> where it displays that the length of the array must be inputted.
+- int input = int Parse Console ReadLine -> where user input is stored into a variable.
+- int[] array = new int[input] -> where new array is initialized and instantiated with the length specified in the previous input.
+- for loop -> which iterates from 0 to input and allows us to input array member values one at a time.
+- Console Write -> where it displays which array member's value needs to be inputted.
+- array[i] = int Parse Console ReadLine -> where user input is stored into a variable.
 
 ```cs
 Console.Write("What is the length of the array: ");
@@ -52,16 +52,16 @@ for (int i = 0; i < numsLength; i++)
 ---
 
 <details>
-<summary>STRUCTURE EXPLAINED IN GREATER DETAIL</summary><br>
-- When initializing an array and imediately filling it with values, notice that array Length does not need to be provided. This is because the Length of the array is implied by the number of values provided. Also, array does not need to be specifically instantiated (new int[input]). This is because instantiation is implied.<br>
-- Console.ReadLine always takes user input in a string format. To convert the string input to a int value -> int.Parse needs to be used.<br>
-- When initializing an array first before filling it with values, array Length needs to be provided and array needs to be specifically instantiated (new int[input]).<br>
-- Array members can be accessed by using array[i].
+<summary>CODE EXPLAINED IN GREATER DETAIL</summary><br>
+- When initializing an array and at once filling it with values, notice that array Length does not need to be specified. This is because the Length of the array is implied by the number of values provided. Also, array does not need to be specifically instantiated (new int[input]). This is because instantiation is implied.<br><br>
+- When initializing an array first before filling it with values, array Length needs to be specified and array needs to be specifically instantiated (new int[input]).<br><br>
+- Console.ReadLine always takes user input in a text format (string) . To convert the text input into (string) a numeric input (int) -> int.Parse needs to be used.<br><br>
+- Array members can be accessed by using array[i].<br>
 </details>
 
 ---
 
-Next, the **RunningSum** function from **Solution** class is being called. It takes an array (_int[] array_) and returns an array (_int[] array_). The returned array is being stored into an existing array. The returned array is then printed out to the console by using the for loop.
+Next, the **RunningSum** function from **Solution** class is called. It takes an array (_int[] array_) and returns an array (_int[] array_). The returned array is stored into an existing array. The returned array is then printed out to the console by using the for loop and if statement.
 
 ```cs
 nums = Solution.RunningSum(nums);
@@ -77,8 +77,8 @@ for(int i = 0; i < nums.Length; i++)
 
 At the end of the **Program** class there is next structure:
 
-- Console WriteLine -> displaying that the code is done processing.
-- Console ReadLine -> where it is waiting for user input. Why are we waiting for user input? To stop the code from automatically completing and exiting and us not being able to check the result of the code.
+- Console WriteLine -> where it displays that the code is done processing.
+- Console ReadLine -> where it waits for user input. Why does it wait for user input? To stop the code from automatically completing and exiting and us not being able to check the result of the code.
 
 ```cs
 Console.WriteLine("\nDone processing");
@@ -87,7 +87,7 @@ Console.ReadLine();
 
 ### Solution class 
 
-I have created a new class and named it **Solution**. I have made it public. I have created the **RunningSum** function to replicate the example from LeetCode problem. I have made it static.
+I have created a new class and named it **Solution**. I have made it public. I have created the **RunningSum** function to replicate the example from the LeetCode problem. I have made it static.
 
 ```cs
 public class Solution
@@ -96,31 +96,24 @@ public class Solution
     {
 ```
 
-The for loop is created that iterates from _0_ to _array Length_.
+The **for** loop is initialized that iterates from _1 to _array Length_.
 
-```cs
-string fullWord = "";
-int counter = word1.Length + word2.Length;
-```
-
-Secondly, the **for** function is created that iterates from _1_ to _counter_.
-
-Why does it go from 1 and not 0? Because first array value remains the same.
+Why does i go from 1 and not 0? Because the first array member value remains the same.
 
 ```cs
 for (int i = 1; i < nums.Length; i++)
 {
 ```
 
-The value of the current array member is being set as a sum of current array value and previous array member value.
+The value of the current array member is set as the sum of current array member value and previous array member value.
 
-Why do we not need to sum all the previous array member values? Because the previous member value already contains the sum of all its previous member values.
+Why do we not need to run the total sum of all previous array member values? Because the value of the previous array member already contains the total sum of all previous array member values.
 
 ```cs
 nums[i] = nums[i] + nums[i - 1];
 ```
 
-At the end of the **Solution** class, the array is being returned.
+At the end of the **Solution** class, the **nums** array is returned.
 
 ```cs
 return nums;
