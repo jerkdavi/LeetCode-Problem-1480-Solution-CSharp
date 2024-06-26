@@ -2,7 +2,7 @@
 
 This is my solution to LeetCode Problem 1480 - **Running Sum of 1d Array** - in C# and a brief explanation
 
-Link to problem on LeetCode -> [https://leetcode.com/problems/merge-strings-alternately/](https://leetcode.com/problems/running-sum-of-1d-array/)
+Link to problem on LeetCode -> [https://leetcode.com/problems/running-sum-of-1d-array/](https://leetcode.com/problems/running-sum-of-1d-array/)
 
 ## PROJECT EXPLANATION
 
