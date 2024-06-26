@@ -121,8 +121,21 @@ return nums;
 
 ## POTENTIAL MISTAKES (I HAVE MADE)
 
+In **Solution** class, instead of storing the modified array values into the existing array, I created a new array and populated it with values. Even though this is **NOT WRONG**, it **IS SPACE INEFFICIENT**. The original array values are not needed, so they can be overwritten with new values.
 
+```cs
+int[] sums = new int[nums.Length];
+```
+
+In **Solution** class, instead of iterating from _1 to array Length_ I iterated from _0 to array Length_. Then based on the if else statement, I populated the array values. Keep in mind that the modified values are stored in the new array I created in the step before. Even though this is **NOT WRONG**, it **IS TIME INEFFICIENT** because with every for loop iteration it needs to check the if else statement.
+
+```cs
+for (int i = 0; i < nums.Length; i++)
+{
+    if (i == 0) { sums[i] = nums[i]; }
+    else { sums[i] = nums[i] + sums[i - 1]; }
+```
 
 ## RUNNING THE CODE - RESULT
 
-
+![image](https://github.com/jerkdavi/LeetCode-Problem-1480-Solution-CSharp/assets/75536158/6ea62122-f6c8-43e9-8b9b-99982cc79789) ![image](https://github.com/jerkdavi/LeetCode-Problem-1480-Solution-CSharp/assets/75536158/8379897d-fa89-43ba-b50e-2825047b76a6) ![image](https://github.com/jerkdavi/LeetCode-Problem-1480-Solution-CSharp/assets/75536158/182345d8-b101-493b-91cd-591a9484280c)
