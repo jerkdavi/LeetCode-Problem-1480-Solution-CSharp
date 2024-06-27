@@ -78,7 +78,16 @@ for(int i = 0; i < nums.Length; i++)
 At the end of the **Program** class there is next structure:
 
 - Console WriteLine -> where it displays that the code is done processing.
-- Console ReadLine -> where it waits for user input. Why does it wait for user input? To stop the code from automatically completing and exiting and us not being able to check the result of the code.
+- Console ReadLine -> where it waits for user input.
+
+---
+
+<details>
+<summary>WHY DOES CONSOLE READLINE WAIT FOR USER INPUT?</summary><br>
+To stop the code from automatically completing and exiting and us not being able to check the result of the code.<br>
+</details>
+
+---
 
 ```cs
 Console.WriteLine("\nDone processing");
@@ -98,7 +107,14 @@ public class Solution
 
 The **for** loop is initialized that iterates from _1 to array Length_.
 
-Why does i go from 1 and not 0? Because the first array member value remains the same.
+---
+
+<details>
+<summary>WHY DOES <strong>i</strong> GO FROM 1 AND NOT 0? </summary><br>
+Because the first array member value remains the same.<br>
+</details>
+
+---
 
 ```cs
 for (int i = 1; i < nums.Length; i++)
@@ -107,7 +123,14 @@ for (int i = 1; i < nums.Length; i++)
 
 The value of the current array member is set as the sum of current array member value and previous array member value.
 
-Why do we not need to run the total sum of all previous array member values? Because the value of the previous array member already contains the total sum of all previous array member values.
+---
+
+<details>
+<summary>WHY DO WE NOT NEED TO RUN THE TOTAL SUM OF ALL PREVIOUS ARRAY MEMBER VALUES? </summary><br>
+Because the value of the previous array member already contains the total sum of all previous array member values.<br>
+</details>
+
+---
 
 ```cs
 nums[i] = nums[i] + nums[i - 1];
