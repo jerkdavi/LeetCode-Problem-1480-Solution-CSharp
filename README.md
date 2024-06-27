@@ -135,6 +135,7 @@ for (int i = 0; i < nums.Length; i++)
     if (i == 0) { sums[i] = nums[i]; }
     else { sums[i] = nums[i] + sums[i - 1]; }
 ```
+Any advice regarding making the code _MORE TIME AND SPACE EFFICIENT_ is **MORE THAN WELCOME**.
 
 ## RUNNING THE CODE - RESULT
 
