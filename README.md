@@ -144,13 +144,32 @@ return nums;
 
 ## POTENTIAL MISTAKES (I HAVE MADE)
 
-In **Solution** class, instead of storing the modified array values into the existing array, I created a new array and populated it with values. Even though this is **NOT WRONG**, it **IS SPACE INEFFICIENT**. The original array values are not needed, so they can be overwritten with new values.
+In **Solution** class, instead of storing the modified array values into the existing array, I created a new array and populated it with values. Even though this is **NOT WRONG**, it **IS SPACE INEFFICIENT**.
+
+---
+
+<details>
+<summary>WHY IS IT SPACE INEFFICIENT?</summary><br>
+Because the original array values are not needed, and they can be overwritten with new values.<br>
+</details>
+
+---
 
 ```cs
 int[] sums = new int[nums.Length];
 ```
 
-In **Solution** class, instead of iterating from _1 to array Length_ I iterated from _0 to array Length_. Then based on the if else statement, I populated the array values. Keep in mind that the modified values are stored in the new array I created in the step before. Even though this is **NOT WRONG**, it **IS TIME INEFFICIENT** because with every for loop iteration it needs to check the if else statement.
+In **Solution** class, instead of iterating from _1 to array Length_ I iterated from _0 to array Length_. Then based on the if else statement, I populated the array values. Keep in mind that the modified values are stored in the new array I created in the step before. Even though this is **NOT WRONG**, it **IS TIME INEFFICIENT**.
+
+
+---
+
+<details>
+<summary>WHY IS IT TIME INEFFICIENT?</summary><br>
+Because with every for loop iteration it needs to check the if-else statement.<br>
+</details>
+
+---
 
 ```cs
 for (int i = 0; i < nums.Length; i++)
